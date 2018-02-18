@@ -1,5 +1,27 @@
 // declare and initialize global variables
+var canvas;
+var clearButton;
 
+
+function setup(){
+  canvas= createCanvas(500,400);
+  canvas.parent("#canvas-area");
+  canvas.mousePressed(drawEllipse);
+  clearButton = select("#clear-button");
+  clearButton.mousePressed(clearScreen);
+  background(65,60,68);
+}
+
+
+function drawEllipse(){
+  fill("#f000f0");
+  noStroke();
+  ellipse(mouseX,mouseY,25,25);
+}
+
+function clearScreen(){
+  background(65,60,68);
+}
 /*
  * setup()
  */
